@@ -14,10 +14,10 @@ public class TRELLOCrearTableroPage extends TRELLOHomePage {
 	}
 
 	// LOCATORS
-	@FindBy(xpath = "//input[@placeholder='Añadir título de tablero']")
+	@FindBy(xpath = "//div[text()='Título del tablero']//..//input")
 	private WebElement inputNombreTablero;
 
-	@FindBy(xpath = "//button[text() ='Crear tablero']")
+	@FindBy(xpath = "//button[text()='Crear']")
 	private WebElement buttonCrearTablero;
 
 	// METHODS

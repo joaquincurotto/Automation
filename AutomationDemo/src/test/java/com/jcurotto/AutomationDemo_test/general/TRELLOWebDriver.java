@@ -13,7 +13,7 @@ public class TRELLOWebDriver {
 	private static TRELLOWebDriver INSTANCE = null;
 	private static WebDriver webDriver = null;
 
-	public static TRELLOWebDriver getOWDInstance() {
+	public static TRELLOWebDriver getWDInstance() {
 		if (INSTANCE == null) {
 			INSTANCE = new TRELLOWebDriver();
 		}
@@ -31,7 +31,7 @@ public class TRELLOWebDriver {
 
 	private void createDriver() {
 		try {
-			switch (TRELLOConstants.BROWSER) {
+			switch (CONSTANTS.BROWSER) {
 
 			case "CHROME":
 				WebDriverManager.chromedriver().setup();
@@ -47,7 +47,7 @@ public class TRELLOWebDriver {
 
 		Exception e) {
 			System.out.println(
-					"An error has occurred when trying to instantiate the WebDriver for " + TRELLOConstants.BROWSER);
+					"An error has occurred when trying to instantiate the WebDriver for " + CONSTANTS.BROWSER);
 			e.printStackTrace();
 		}
 	}
@@ -55,7 +55,7 @@ public class TRELLOWebDriver {
 	private void setWebDriverParameters() {
 //		webDriver.manage().window().fullscreen();
 		webDriver.manage().deleteAllCookies();
-		webDriver.manage().timeouts().setScriptTimeout(TRELLOConstants.WEBDRIVER_DEFAULT_TIMEOUT, TimeUnit.SECONDS);
+		webDriver.manage().timeouts().setScriptTimeout(CONSTANTS.WEBDRIVER_DEFAULT_TIMEOUT, TimeUnit.SECONDS);
 	}
 
 	private ChromeOptions setChromeOptions() {

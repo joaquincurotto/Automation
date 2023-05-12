@@ -1,15 +1,9 @@
 package com.jcurotto.AutomationDemo_test.general;
 
-import java.io.File;
 import java.io.IOException;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 
-import javax.imageio.ImageIO;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -17,10 +11,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.asserts.SoftAssert;
 
-import com.jcurotto.AutomationDemo_test.pages.TRELLOLandingPage;
+import com.jcurotto.AutomationDemo_test.pages.*;
 
-import ru.yandex.qatools.ashot.AShot;
-import ru.yandex.qatools.ashot.Screenshot;
+
 
 public class TRELLOBaseTest {
 
@@ -31,7 +24,7 @@ public class TRELLOBaseTest {
 
 	@BeforeSuite(alwaysRun = true)
 	protected void beforeSuite() {
-		new TRELLOConstants();
+		new CONSTANTS();
 	}
 
 	@BeforeMethod(alwaysRun = true)
@@ -49,13 +42,6 @@ public class TRELLOBaseTest {
 
 		switch (testResult.getStatus()) {
 		case ITestResult.FAILURE:
-			try {
-				Screenshot screenshot = new AShot().takeScreenshot(TRELLOWebDriver.getDriver());
-				ImageIO.write(screenshot.getImage(), "png", new File("./screenshots/failed" + Math.random() + ".png"));
-				System.out.println("Screenshot taken");
-			} catch (Exception e) {
-				System.out.println("Exception while taking screenshot " + e.getMessage());
-			}
 			testExecutionResult = "FAILED";
 			break;
 
@@ -73,7 +59,7 @@ public class TRELLOBaseTest {
 
 		FUtils.log("The execution result is: " + testExecutionResult);
 		FUtils.log("Finishing execution for: " + this.methodName);
-		TRELLOWebDriver.getOWDInstance().quitOWDInstance();
+		TRELLOWebDriver.getWDInstance().quitOWDInstance();
 	}
 
 	private void getTestNames(Method method) {
@@ -92,8 +78,14 @@ public class TRELLOBaseTest {
 	}
 
 	protected TRELLOLandingPage goToTRELLOLandingPage() {
-		TRELLOWebDriver.getOWDInstance().navigateTo(TRELLOConstants.ENVIRONMENT_URL);
-		return PageFactory.initElements(TRELLOWebDriver.getOWDInstance().getDriver(), TRELLOLandingPage.class);
+		TRELLOWebDriver.getWDInstance().navigateTo(CONSTANTS.ENVIRONMENT_URL);
+		return PageFactory.initElements(TRELLOWebDriver.getWDInstance().getDriver(), TRELLOLandingPage.class);
 	}
+
+	protected hexactaLandingPage goToHEXACTALandingPage() {
+		TRELLOWebDriver.getWDInstance().navigateTo(CONSTANTS.ENVIRONMENT_HEXACTA_URL);
+		return PageFactory.initElements(TRELLOWebDriver.getWDInstance().getDriver(), hexactaLandingPage.class);
+	}
+
 
 }

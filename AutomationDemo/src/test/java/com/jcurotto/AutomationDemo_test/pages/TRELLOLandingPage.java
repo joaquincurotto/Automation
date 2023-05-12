@@ -13,7 +13,7 @@ public class TRELLOLandingPage {
 	protected WebDriver webDriver;
 
 	// ==LOCATORS==
-	@FindBy(xpath = "//a[@class='btn btn-sm btn-link text-primary']")
+	@FindBy(xpath = "//a[text()='Iniciar sesión']")
 	private WebElement buttonIniciarSesion;
 
 	public TRELLOLoginPageUsername clickIniciarSesion() {

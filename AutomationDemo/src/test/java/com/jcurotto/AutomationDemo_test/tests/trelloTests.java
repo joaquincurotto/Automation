@@ -6,19 +6,14 @@ import org.testng.annotations.Test;
 
 import com.jcurotto.AutomationDemo_test.general.FUtils;
 import com.jcurotto.AutomationDemo_test.general.TRELLOBaseTest;
-import com.jcurotto.AutomationDemo_test.pages.TRELLOCrearTableroPage;
-import com.jcurotto.AutomationDemo_test.pages.TRELLOHomePage;
-import com.jcurotto.AutomationDemo_test.pages.TRELLOLandingPage;
-import com.jcurotto.AutomationDemo_test.pages.TRELLOLoginPagePassword;
-import com.jcurotto.AutomationDemo_test.pages.TRELLOLoginPageUsername;
-import com.jcurotto.AutomationDemo_test.pages.TRELLOTableropage;
+import com.jcurotto.AutomationDemo_test.pages.*;
 
 import dataProvider.dataProviderClass;
 
 public class trelloTests extends TRELLOBaseTest {
 
 
-	
+
 	@Test(testName = "Login to Trello and create a new board", dataProvider="DataProvider", dataProviderClass = dataProviderClass.class)
 	public void LoginToTRELLOandCREATEBOEARD(String pUsername, String pPassword, String pNombreTablero) {
 
@@ -46,6 +41,14 @@ public class trelloTests extends TRELLOBaseTest {
 		FUtils.log("Verificar que el tablero se creo");
 		Assert.assertTrue(trellotp.verificarSielTableroSeCreo(pNombreTablero));
 
+	}
+
+	@Test
+	public void hexactaTest(){
+		hexactaLandingPage hlp = super.goToHEXACTALandingPage();
+		hlp.clickButtonSearch();
+		hexactaSearchResult hsr = hlp.typeSearch();
+		Assert.assertTrue(hsr.verifyIfTitleExist());
 	}
 
 }

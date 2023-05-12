@@ -18,8 +18,8 @@ public abstract class FUtils {
 
 
 	public static void waitForElement(WebElement webElement, String waitFor) {
-		WebDriverWait webDriverWait = new WebDriverWait(TRELLOWebDriver.getOWDInstance().getDriver(),
-				TRELLOConstants.WEBELEMENT_DEFAULT_TIMEOUT);
+		WebDriverWait webDriverWait = new WebDriverWait(TRELLOWebDriver.getWDInstance().getDriver(),
+				CONSTANTS.WEBELEMENT_DEFAULT_TIMEOUT);
 
 		switch (waitFor.toUpperCase()) {
 		case "CLICKABLE":
@@ -34,7 +34,7 @@ public abstract class FUtils {
 
 		case "SLEEP":
 			try {
-				Thread.sleep(TRELLOConstants.WEBELEMENT_DEFAULT_TIMEOUT * 150);
+				Thread.sleep(CONSTANTS.WEBELEMENT_DEFAULT_TIMEOUT * 150);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

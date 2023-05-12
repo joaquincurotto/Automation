@@ -17,8 +17,8 @@ public class TRELLOLoginPageUsername extends TRELLOLandingPage {
 	@FindBy(xpath = "//input[@id='user']")
 	private WebElement inputUsername;
 	
-	@FindBy(xpath = "//input[@id='login' and @value='Iniciar sesión con Atlassian']")
-	private WebElement buttonIniciarSesionConAtlassian;
+	@FindBy(id = "login")
+	private WebElement buttonLogin;
 	
 
 	
@@ -26,8 +26,8 @@ public class TRELLOLoginPageUsername extends TRELLOLandingPage {
 	public TRELLOLoginPagePassword typeUsername(String pUsername) {
 		FUtils.waitForElement(this.inputUsername, "VISIBLE");
 		this.inputUsername.sendKeys(pUsername);
-		FUtils.waitForElement(this.buttonIniciarSesionConAtlassian, "VISIBLE");
-		this.buttonIniciarSesionConAtlassian.click();
+		FUtils.waitForElement(this.buttonLogin, "VISIBLE");
+		this.buttonLogin.click();
 		return PageFactory.initElements(this.webDriver, TRELLOLoginPagePassword.class);
 	}
 	
