@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Baufest Tests">
+
+    <listeners>
+        <listener class-name="org.testng.reporters.JUnitXMLReporter"/>
+        <listener class-name="org.testng.reporters.XMLReporter"/>
+        <listener class-name="org.testng.reporters.EmailableReporter"/>
+        <listener class-name="org.testng.reporters.SuiteHTMLReporter"/>
+    </listeners>
+
+    <test thread-count="5" name="Automation">
+        <classes>
+            <class name="com.jcurotto.AutomationDemo_test.tests.tests"/>
+            <class name="com.jcurotto.AutomationDemo_test.restAssured.basicRestAssuredTests"/>
+        </classes>
+    </test>
+</suite>

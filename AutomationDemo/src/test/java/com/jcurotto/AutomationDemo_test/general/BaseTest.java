@@ -5,10 +5,13 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 
 import org.openqa.selenium.support.PageFactory;
+import org.testng.ITestContext;
 import org.testng.ITestResult;
+import org.testng.TestRunner;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.asserts.SoftAssert;
 
 import com.jcurotto.AutomationDemo_test.pages.*;
@@ -35,7 +38,6 @@ public class BaseTest {
 		FUtils.log("Starting execution for: " + this.methodName);
 
 	}
-
 	@AfterMethod(alwaysRun = true)
 	protected void after(ITestResult testResult) throws IOException {
 		String testExecutionResult = "";

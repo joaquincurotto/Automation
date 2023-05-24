@@ -9,7 +9,7 @@ import com.jcurotto.AutomationDemo_test.pages.*;
 
 import dataProvider.dataProviderClass;
 
-public class BAUFESTTests extends BaseTest {
+public class tests extends BaseTest {
 
 	@Test(testName = "Create new DemoBlaze user / Login / Add laptop to card", dataProvider="DataProvider", dataProviderClass = dataProviderClass.class)
 	public void demoBlaze(String pUsername, String pPassword) {
