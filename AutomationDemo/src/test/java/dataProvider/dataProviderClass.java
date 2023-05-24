@@ -7,8 +7,8 @@ public class dataProviderClass {
 	    public Object[][] getDataFromDataprovider(){
 	    return new Object[][] 
 	    	{
-	            { "jtestingtest182@gmail.com", "J12345678!", "TESTING8" },
-	            { "jtestingtest182@gmail.com", "X!", "TESTING8" },
+	            { "BAUFEST25", "A"},
+
 	        };
 
 	    }

@@ -22,6 +22,10 @@ public class DEMOBLAZELaptopsPage {
     @FindBy(xpath = "//h4[@class='card-title']")
     private List<WebElement> listLaptops;
 
+    public String laptopName(){
+        FUtils.waitForElement(this.listLaptops.get(1),"SLEEP");
+        return this.listLaptops.get(1).getText();
+    }
     public DEMOBLAZELaptopDetailPage clickOnALaptopName(){
         FUtils.waitForElement(this.listLaptops.get(1),"SLEEP");
         this.listLaptops.get(1).click();
