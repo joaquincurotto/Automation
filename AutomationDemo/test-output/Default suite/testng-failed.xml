@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.jcurotto.AutomationDemo_test.tests.trelloTests">
+      <class name="com.jcurotto.AutomationDemo_test.tests.BAUFESTTests">
         <methods>
           <include name="before"/>
           <include name="after"/>
           <include name="LoginToTRELLOandCREATEBOEARD" invocation-numbers="1"/>
           <include name="beforeSuite"/>
         </methods>
-      </class> <!-- com.jcurotto.AutomationDemo_test.tests.trelloTests -->
+      </class> <!-- com.jcurotto.AutomationDemo_test.tests.BAUFESTTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

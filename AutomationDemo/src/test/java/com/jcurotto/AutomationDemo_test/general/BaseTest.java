@@ -15,7 +15,7 @@ import com.jcurotto.AutomationDemo_test.pages.*;
 
 
 
-public class TRELLOBaseTest {
+public class BaseTest {
 
 	protected String methodName;
 	protected String testScriptName;
@@ -59,7 +59,7 @@ public class TRELLOBaseTest {
 
 		FUtils.log("The execution result is: " + testExecutionResult);
 		FUtils.log("Finishing execution for: " + this.methodName);
-		TRELLOWebDriver.getWDInstance().quitOWDInstance();
+		WebDriver.getWDInstance().quitOWDInstance();
 	}
 
 	private void getTestNames(Method method) {
@@ -77,15 +77,11 @@ public class TRELLOBaseTest {
 		}
 	}
 
-	protected TRELLOLandingPage goToTRELLOLandingPage() {
-		TRELLOWebDriver.getWDInstance().navigateTo(CONSTANTS.ENVIRONMENT_URL);
-		return PageFactory.initElements(TRELLOWebDriver.getWDInstance().getDriver(), TRELLOLandingPage.class);
+	protected DEMOBLAZELandingPage goToDEMOBLAZELandingPage() {
+		WebDriver.getWDInstance().navigateTo(CONSTANTS.ENVIRONMENT_URL);
+		return PageFactory.initElements(WebDriver.getWDInstance().getDriver(), DEMOBLAZELandingPage.class);
 	}
 
-	protected hexactaLandingPage goToHEXACTALandingPage() {
-		TRELLOWebDriver.getWDInstance().navigateTo(CONSTANTS.ENVIRONMENT_HEXACTA_URL);
-		return PageFactory.initElements(TRELLOWebDriver.getWDInstance().getDriver(), hexactaLandingPage.class);
-	}
 
 
 }

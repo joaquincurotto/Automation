@@ -63,21 +63,21 @@
     <groups>
     </groups>
     <test started-at="2021-04-28T18:59:49Z" name="Default test" finished-at="2021-04-28T19:00:40Z" duration-ms="50234">
-      <class name="com.jcurotto.AutomationDemo_test.tests.trelloTests">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.trelloTests@7857fe2]" started-at="2021-04-28T18:59:49Z" name="beforeSuite" finished-at="2021-04-28T18:59:49Z" duration-ms="10" status="PASS">
+      <class name="com.jcurotto.AutomationDemo_test.tests.BAUFESTTests">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.BAUFESTTests@7857fe2]" started-at="2021-04-28T18:59:49Z" name="beforeSuite" finished-at="2021-04-28T18:59:49Z" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="before(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.trelloTests@7857fe2]" started-at="2021-04-28T18:59:49Z" name="before" finished-at="2021-04-28T18:59:49Z" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="before(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.BAUFESTTests@7857fe2]" started-at="2021-04-28T18:59:49Z" name="before" finished-at="2021-04-28T18:59:49Z" duration-ms="5" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.jcurotto.AutomationDemo_test.tests.trelloTests.LoginToTRELLOandCREATEBOEARD(java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void com.jcurotto.AutomationDemo_test.tests.BAUFESTTests.LoginToTRELLOandCREATEBOEARD(java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=LoginToTRELLOandCREATEBOEARD status=SUCCESS method=trelloTests.LoginToTRELLOandCREATEBOEARD(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.trelloTests@7857fe2] output=Navigate to Trello]]]>
+                <![CDATA[[TestResult name=LoginToTRELLOandCREATEBOEARD status=SUCCESS method=trelloTests.LoginToTRELLOandCREATEBOEARD(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.BAUFESTTests@7857fe2] output=Navigate to Trello]]]>
               </value>
             </param>
           </params>
@@ -87,7 +87,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method signature="LoginToTRELLOandCREATEBOEARD(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.trelloTests@7857fe2]" started-at="2021-04-28T18:59:49Z" name="LoginToTRELLOandCREATEBOEARD" data-provider="DataProvider" finished-at="2021-04-28T19:00:11Z" duration-ms="21965" status="PASS">
+        <test-method signature="LoginToTRELLOandCREATEBOEARD(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.BAUFESTTests@7857fe2]" started-at="2021-04-28T18:59:49Z" name="LoginToTRELLOandCREATEBOEARD" data-provider="DataProvider" finished-at="2021-04-28T19:00:11Z" duration-ms="21965" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -132,11 +132,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- LoginToTRELLOandCREATEBOEARD -->
-        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.trelloTests@7857fe2]" started-at="2021-04-28T19:00:11Z" name="after" finished-at="2021-04-28T19:00:13Z" duration-ms="2168" status="PASS">
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.BAUFESTTests@7857fe2]" started-at="2021-04-28T19:00:11Z" name="after" finished-at="2021-04-28T19:00:13Z" duration-ms="2168" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=LoginToTRELLOandCREATEBOEARD status=SUCCESS method=trelloTests.LoginToTRELLOandCREATEBOEARD(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.trelloTests@7857fe2] output=Navigate to Trello]]]>
+                <![CDATA[[TestResult name=LoginToTRELLOandCREATEBOEARD status=SUCCESS method=trelloTests.LoginToTRELLOandCREATEBOEARD(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.BAUFESTTests@7857fe2] output=Navigate to Trello]]]>
               </value>
             </param>
           </params>
@@ -149,16 +149,16 @@
             </line>
           </reporter-output>
         </test-method> <!-- after -->
-        <test-method is-config="true" signature="before(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.trelloTests@7857fe2]" started-at="2021-04-28T19:00:13Z" name="before" finished-at="2021-04-28T19:00:13Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="before(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.BAUFESTTests@7857fe2]" started-at="2021-04-28T19:00:13Z" name="before" finished-at="2021-04-28T19:00:13Z" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.jcurotto.AutomationDemo_test.tests.trelloTests.LoginToTRELLOandCREATEBOEARD(java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void com.jcurotto.AutomationDemo_test.tests.BAUFESTTests.LoginToTRELLOandCREATEBOEARD(java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=LoginToTRELLOandCREATEBOEARD status=FAILURE method=trelloTests.LoginToTRELLOandCREATEBOEARD(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.trelloTests@7857fe2] output=Navigate to Trello]]]>
+                <![CDATA[[TestResult name=LoginToTRELLOandCREATEBOEARD status=FAILURE method=trelloTests.LoginToTRELLOandCREATEBOEARD(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.BAUFESTTests@7857fe2] output=Navigate to Trello]]]>
               </value>
             </param>
           </params>
@@ -168,7 +168,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method signature="LoginToTRELLOandCREATEBOEARD(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.trelloTests@7857fe2]" started-at="2021-04-28T19:00:13Z" name="LoginToTRELLOandCREATEBOEARD" data-provider="DataProvider" finished-at="2021-04-28T19:00:33Z" duration-ms="19423" status="FAIL">
+        <test-method signature="LoginToTRELLOandCREATEBOEARD(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.BAUFESTTests@7857fe2]" started-at="2021-04-28T19:00:13Z" name="LoginToTRELLOandCREATEBOEARD" data-provider="DataProvider" finished-at="2021-04-28T19:00:33Z" duration-ms="19423" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -196,7 +196,7 @@ at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.j
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 at com.jcurotto.AutomationDemo_test.general.FUtils.waitForElement(FUtils.java:26)
 at com.jcurotto.AutomationDemo_test.pages.TRELLOHomePage.clickOnButtonTableros(TRELLOHomePage.java:23)
-at com.jcurotto.AutomationDemo_test.tests.trelloTests.LoginToTRELLOandCREATEBOEARD(trelloTests.java:38)
+at com.jcurotto.AutomationDemo_test.tests.BAUFESTTests.LoginToTRELLOandCREATEBOEARD(trelloTests.java:38)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -277,11 +277,11 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
             </line>
           </reporter-output>
         </test-method> <!-- LoginToTRELLOandCREATEBOEARD -->
-        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.trelloTests@7857fe2]" started-at="2021-04-28T19:00:33Z" name="after" finished-at="2021-04-28T19:00:39Z" duration-ms="6653" status="PASS">
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.BAUFESTTests@7857fe2]" started-at="2021-04-28T19:00:33Z" name="after" finished-at="2021-04-28T19:00:39Z" duration-ms="6653" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=LoginToTRELLOandCREATEBOEARD status=FAILURE method=trelloTests.LoginToTRELLOandCREATEBOEARD(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.trelloTests@7857fe2] output=Navigate to Trello]]]>
+                <![CDATA[[TestResult name=LoginToTRELLOandCREATEBOEARD status=FAILURE method=trelloTests.LoginToTRELLOandCREATEBOEARD(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.BAUFESTTests@7857fe2] output=Navigate to Trello]]]>
               </value>
             </param>
           </params>
@@ -294,7 +294,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
             </line>
           </reporter-output>
         </test-method> <!-- after -->
-      </class> <!-- com.jcurotto.AutomationDemo_test.tests.trelloTests -->
+      </class> <!-- com.jcurotto.AutomationDemo_test.tests.BAUFESTTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

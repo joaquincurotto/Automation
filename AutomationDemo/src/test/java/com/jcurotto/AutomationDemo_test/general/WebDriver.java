@@ -2,30 +2,29 @@ package com.jcurotto.AutomationDemo_test.general;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TRELLOWebDriver {
+public class WebDriver {
 
-	private static TRELLOWebDriver INSTANCE = null;
-	private static WebDriver webDriver = null;
+	private static WebDriver INSTANCE = null;
+	private static org.openqa.selenium.WebDriver webDriver = null;
 
-	public static TRELLOWebDriver getWDInstance() {
+	public static WebDriver getWDInstance() {
 		if (INSTANCE == null) {
-			INSTANCE = new TRELLOWebDriver();
+			INSTANCE = new WebDriver();
 		}
 		return INSTANCE;
 	}
 
-	private TRELLOWebDriver() {
+	private WebDriver() {
 
 		this.createDriver();
 	}
 
-	public static WebDriver getDriver() {
+	public static org.openqa.selenium.WebDriver getDriver() {
 		return webDriver;
 	}
 

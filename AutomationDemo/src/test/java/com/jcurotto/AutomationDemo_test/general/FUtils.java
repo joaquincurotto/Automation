@@ -18,7 +18,7 @@ public abstract class FUtils {
 
 
 	public static void waitForElement(WebElement webElement, String waitFor) {
-		WebDriverWait webDriverWait = new WebDriverWait(TRELLOWebDriver.getWDInstance().getDriver(),
+		WebDriverWait webDriverWait = new WebDriverWait(WebDriver.getWDInstance().getDriver(),
 				CONSTANTS.WEBELEMENT_DEFAULT_TIMEOUT);
 
 		switch (waitFor.toUpperCase()) {
