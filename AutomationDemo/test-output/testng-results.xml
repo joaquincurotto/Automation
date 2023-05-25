@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Starting execution for: demoBlaze]]>
@@ -62,16 +62,99 @@
       <![CDATA[Finishing execution for: demoBlaze]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-05-24T18:24:20 UYT" name="Baufest Tests" finished-at="2023-05-24T18:24:43 UYT" duration-ms="22922">
+  <suite started-at="2023-05-25T12:21:46 UYT" name="Baufest Tests" finished-at="2023-05-25T12:22:07 UYT" duration-ms="21415">
     <groups>
     </groups>
-    <test started-at="2023-05-24T18:24:20 UYT" name="Automation" finished-at="2023-05-24T18:24:43 UYT" duration-ms="22922">
+    <test started-at="2023-05-25T12:21:46 UYT" name="Automation" finished-at="2023-05-25T12:22:07 UYT" duration-ms="21415">
+      <class name="com.jcurotto.AutomationDemo_test.restAssured.restAssuredTests">
+        <test-method signature="testGetObtenerMascota()[pri:0, instance:com.jcurotto.AutomationDemo_test.restAssured.restAssuredTests@7920ba90]" started-at="2023-05-25T12:22:03 UYT" name="testGetObtenerMascota" finished-at="2023-05-25T12:22:05 UYT" duration-ms="1915" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <200> but was <404>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <404>.
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at com.jcurotto.AutomationDemo_test.restAssured.restAssuredTests.testGetObtenerMascota(restAssuredTests.java:42)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetObtenerMascota -->
+        <test-method signature="testPostAgregarMascota()[pri:0, instance:com.jcurotto.AutomationDemo_test.restAssured.restAssuredTests@7920ba90]" started-at="2023-05-25T12:22:05 UYT" name="testPostAgregarMascota" finished-at="2023-05-25T12:22:07 UYT" duration-ms="1353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPostAgregarMascota -->
+        <test-method signature="testPutActualizarMascota()[pri:0, instance:com.jcurotto.AutomationDemo_test.restAssured.restAssuredTests@7920ba90]" started-at="2023-05-25T12:22:07 UYT" name="testPutActualizarMascota" finished-at="2023-05-25T12:22:07 UYT" duration-ms="826" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPutActualizarMascota -->
+      </class> <!-- com.jcurotto.AutomationDemo_test.restAssured.restAssuredTests -->
       <class name="com.jcurotto.AutomationDemo_test.tests.tests">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.tests@20d3d15a]" started-at="2023-05-24T18:24:20 UYT" name="beforeSuite" finished-at="2023-05-24T18:24:20 UYT" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.tests@e50a6f6]" started-at="2023-05-25T12:21:46 UYT" name="beforeSuite" finished-at="2023-05-25T12:21:46 UYT" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="before(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.tests@20d3d15a]" started-at="2023-05-24T18:24:20 UYT" name="before" finished-at="2023-05-24T18:24:20 UYT" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="before(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.tests@e50a6f6]" started-at="2023-05-25T12:21:46 UYT" name="before" finished-at="2023-05-25T12:21:46 UYT" duration-ms="5" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -80,7 +163,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=tests.demoBlaze(java.lang.String,java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.tests@20d3d15a] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=tests.demoBlaze(java.lang.String,java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.tests@e50a6f6] output={null}]]]>
               </value>
             </param>
           </params>
@@ -90,11 +173,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method signature="demoBlaze(java.lang.String,java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.tests@20d3d15a]" started-at="2023-05-24T18:24:20 UYT" name="demoBlaze" data-provider="DataProvider" finished-at="2023-05-24T18:24:36 UYT" duration-ms="16013" status="PASS">
+        <test-method signature="demoBlaze(java.lang.String,java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.tests@e50a6f6]" started-at="2023-05-25T12:21:46 UYT" name="demoBlaze" data-provider="DataProvider" finished-at="2023-05-25T12:22:02 UYT" duration-ms="15593" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[BAUFEST36]]>
+                <![CDATA[BAUFEST100]]>
               </value>
             </param>
             <param index="1">
@@ -157,11 +240,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- demoBlaze -->
-        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.tests@20d3d15a]" started-at="2023-05-24T18:24:36 UYT" name="after" finished-at="2023-05-24T18:24:38 UYT" duration-ms="1704" status="PASS">
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.tests@e50a6f6]" started-at="2023-05-25T12:22:02 UYT" name="after" finished-at="2023-05-25T12:22:03 UYT" duration-ms="1687" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=demoBlaze status=SUCCESS method=tests.demoBlaze(java.lang.String,java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.tests@20d3d15a] output=Navigate to DemoBlaze]]]>
+                <![CDATA[[TestResult name=demoBlaze status=SUCCESS method=tests.demoBlaze(java.lang.String,java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.tests.tests@e50a6f6] output=Navigate to DemoBlaze]]]>
               </value>
             </param>
           </params>
@@ -175,96 +258,6 @@
           </reporter-output>
         </test-method> <!-- after -->
       </class> <!-- com.jcurotto.AutomationDemo_test.tests.tests -->
-      <class name="com.jcurotto.AutomationDemo_test.restAssured.basicRestAssuredTests">
-        <test-method signature="createUser(java.lang.String,java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.restAssured.basicRestAssuredTests@14a2f921]" started-at="2023-05-24T18:24:38 UYT" name="createUser" data-provider="DataProvider" finished-at="2023-05-24T18:24:40 UYT" duration-ms="1967" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Joaquin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[QA]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createUser -->
-        <test-method signature="createUser(java.lang.String,java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.restAssured.basicRestAssuredTests@14a2f921]" started-at="2023-05-24T18:24:40 UYT" name="createUser" data-provider="DataProvider" finished-at="2023-05-24T18:24:40 UYT" duration-ms="587" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Emma]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Dev]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createUser -->
-        <test-method signature="createUser(java.lang.String,java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.restAssured.basicRestAssuredTests@14a2f921]" started-at="2023-05-24T18:24:40 UYT" name="createUser" data-provider="DataProvider" finished-at="2023-05-24T18:24:41 UYT" duration-ms="593" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Eve]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[HR]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createUser -->
-        <test-method signature="createUser(java.lang.String,java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.restAssured.basicRestAssuredTests@14a2f921]" started-at="2023-05-24T18:24:41 UYT" name="createUser" data-provider="DataProvider" finished-at="2023-05-24T18:24:41 UYT" duration-ms="624" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Charles]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[DBA]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createUser -->
-        <test-method signature="createUser(java.lang.String,java.lang.String)[pri:0, instance:com.jcurotto.AutomationDemo_test.restAssured.basicRestAssuredTests@14a2f921]" started-at="2023-05-24T18:24:41 UYT" name="createUser" data-provider="DataProvider" finished-at="2023-05-24T18:24:42 UYT" duration-ms="581" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Tracey]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[SM]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createUser -->
-        <test-method signature="testGetUsers()[pri:0, instance:com.jcurotto.AutomationDemo_test.restAssured.basicRestAssuredTests@14a2f921]" started-at="2023-05-24T18:24:42 UYT" name="testGetUsers" finished-at="2023-05-24T18:24:42 UYT" duration-ms="230" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGetUsers -->
-        <test-method signature="verifyIfUserExists()[pri:0, instance:com.jcurotto.AutomationDemo_test.restAssured.basicRestAssuredTests@14a2f921]" started-at="2023-05-24T18:24:42 UYT" name="verifyIfUserExists" finished-at="2023-05-24T18:24:43 UYT" duration-ms="579" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyIfUserExists -->
-      </class> <!-- com.jcurotto.AutomationDemo_test.restAssured.basicRestAssuredTests -->
     </test> <!-- Automation -->
   </suite> <!-- Baufest Tests -->
 </testng-results>

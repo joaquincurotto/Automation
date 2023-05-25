@@ -12,7 +12,7 @@
     <test thread-count="5" name="Automation">
         <classes>
             <class name="com.jcurotto.AutomationDemo_test.tests.tests"/>
-            <class name="com.jcurotto.AutomationDemo_test.restAssured.basicRestAssuredTests"/>
+            <class name="com.jcurotto.AutomationDemo_test.restAssured.restAssuredTests"/>
         </classes>
     </test>
 </suite>
