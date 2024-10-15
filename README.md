@@ -1,4 +1,4 @@
-# BUAFEST AUTOMATION
+# AUTOMATION
 Clonar el repositorio.
 Importarlo en eclipse/IntelliJ como poryecto maven existente .
 Ejecutar los tests desde testng.xml para que se pueda generar el reporte.
