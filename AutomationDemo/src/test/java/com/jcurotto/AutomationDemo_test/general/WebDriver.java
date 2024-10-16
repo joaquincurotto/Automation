@@ -1,10 +1,8 @@
 package com.jcurotto.AutomationDemo_test.general;
 
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class WebDriver {
@@ -20,41 +18,43 @@ public class WebDriver {
 	}
 
 	private WebDriver() {
-
 		this.createDriver();
 	}
 
 	public static org.openqa.selenium.WebDriver getDriver() {
+		// Ensure that the driver is created if it's null
+		if (webDriver == null) {
+			getWDInstance();
+		}
 		return webDriver;
 	}
 
 	private void createDriver() {
 		try {
 			switch (CONSTANTS.BROWSER) {
+				case "CHROME":
+					WebDriverManager.chromedriver().clearDriverCache().setup();  // Force refresh
+					WebDriverManager.chromedriver().setup();
+					webDriver = new ChromeDriver(this.setChromeOptions());
+					break;
 
-			case "CHROME":
-				WebDriverManager.chromedriver().setup();
-				webDriver = new ChromeDriver(this.setChromeOptions());
-				break;
-
-			default:
-				FUtils.log("The specified browser is not correct.");
-				break;
+				default:
+					throw new IllegalArgumentException("The specified browser is not correct.");
 			}
-
-		} catch (
-
-		Exception e) {
-			System.out.println(
-					"An error has occurred when trying to instantiate the WebDriver for " + CONSTANTS.BROWSER);
+		} catch (Exception e) {
+			System.err.println("Error occurred while creating the WebDriver: " + e.getMessage());
 			e.printStackTrace();
+			throw new RuntimeException("Failed to initialize WebDriver", e);
 		}
 	}
 
 	private void setWebDriverParameters() {
-//		webDriver.manage().window().fullscreen();
-		webDriver.manage().deleteAllCookies();
-		webDriver.manage().timeouts().setScriptTimeout(CONSTANTS.WEBDRIVER_DEFAULT_TIMEOUT, TimeUnit.SECONDS);
+		if (webDriver != null) {
+			webDriver.manage().deleteAllCookies();
+			webDriver.manage().timeouts().setScriptTimeout(CONSTANTS.WEBDRIVER_DEFAULT_TIMEOUT, TimeUnit.SECONDS);
+		} else {
+			throw new IllegalStateException("WebDriver is not initialized.");
+		}
 	}
 
 	private ChromeOptions setChromeOptions() {
@@ -63,7 +63,6 @@ public class WebDriver {
 		options.addArguments("--ignore-certificate-errors");
 		options.addArguments("--disable-popup-blocking");
 		options.addArguments("--incognito");
-
 		return options;
 	}
 
@@ -73,23 +72,15 @@ public class WebDriver {
 	}
 
 	public void quitOWDInstance() {
-
 		try {
-
 			if (webDriver != null) {
 				FUtils.waitForElement(null, "SLEEP");
 				webDriver.close();
 				webDriver.quit();
 			}
-
-			if (INSTANCE != null) {
-				INSTANCE = null;
-			}
-
+			INSTANCE = null;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
-
 }
